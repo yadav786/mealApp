@@ -38,7 +38,9 @@ const styles = StyleSheet.create({
 },
 title: {
     fontSize: 18,
-    textAlign: 'right'
+    textAlign: 'right',
+    fontFamily: 'open-sans-bold',
+    fontWeight: 'bold'
 }
 });
 
