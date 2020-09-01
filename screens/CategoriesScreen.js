@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, Button, FlatList, TouchableOpacity, Platform } from 'react-native';
+import { StyleSheet, FlatList, Platform } from 'react-native';
 
 import { CATEGORIES } from '../data/dummy-data';
 

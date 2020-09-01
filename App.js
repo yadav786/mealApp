@@ -6,6 +6,16 @@ import MealNavigator from './navigation/MealsNavigator';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
 
+import { createStore, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
+import mealReducer from './store/reducers/meals';
+
+const rootReducer = combineReducers({
+  meals: mealReducer  
+});
+
+const store = createStore(rootReducer);
+
 const fetchFonts = () => {
 
   const [dataLoaded, setDataLoaded] = useState(false);
@@ -22,7 +32,9 @@ const fetchFonts = () => {
 
 export default function App() {
   return (
+    <Provider store={store}>
     <MealNavigator />
+    </Provider>
   );
 }
 
